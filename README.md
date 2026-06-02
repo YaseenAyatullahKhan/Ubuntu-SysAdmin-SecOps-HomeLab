@@ -1,5 +1,5 @@
 # Multi-Tenant System Orchestration and Automation with SecOps Baseline
-A multi-tenancy focused Linux configuration and system administration home lab proect. This project documents a complete hands-on deployment transitioning a raw virtual machine into a secure, multi-tenant corporate environment, implementing custom automation scripts, establishing log-preservation backups, and running high-performance text-parsing pipelines in memory.
+A multi-tenancy focused Linux configuration and system administration home lab project. This project documents a complete hands-on deployment transitioning a raw virtual machine into a secure, multi-tenant corporate environment, implementing custom automation scripts, establishing log-preservation backups, and running high-performance text-parsing pipelines in memory.
 
 This lab was successfully configured, tested, and validated on a **64-bit virtual machine** running **Ubuntu Server 22.04 LTS** (minimal kernel pre-built by OSBoxes) hosted on a VMware Workstation hypervisor. [(Automatic) Download here](https://sourceforge.net/projects/osboxes/files/v/vm/55-U--u/OVA-Versions/22.04-VM/Ubuntu-22.04-64bit-VMware.ova/download)   
 *(download the free VMware Workstation Pro first then open the downloaded file from above inside it)*
