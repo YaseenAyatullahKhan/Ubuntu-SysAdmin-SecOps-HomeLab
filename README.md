@@ -29,10 +29,12 @@ Via the `su` (super-user) mode, I utilised the following commands:
 | `chmod 1770 [group-name]` | Modifying directory permissions where 1 applies a sticky bit (only file-owner/directory-owner/root-user can delete or rename files), 7 for full permission for user owner and group owner, and 0 for no permissions for any other user |
 |`echo "This file contains confidential information for the department." > [group-name]/confidential.txt` | A .txt document for each department's internal, confidential use |
 | `chmod 740 [group-name]/confidential.txt` | Hardening permissions for this document (4 allows read-only access to the group) |
----
 
 #### 📸 Verification Artifacts (Part 1)
-![Output Screenshot](/screenshots/.png)
+![Output Screenshot](screenshots/egrep_group.png)
+![Output Screenshot](screenshots/egrep_passwd.png)
+![Output Screenshot](screenshots/ls-l.png)
+![Output Screenshot](screenshots/ls-ld.png)
 
 ---
 ### 🤖 Part 2: Interactive User Provisioning Script
@@ -41,7 +43,8 @@ Manually configuring users, validating inputs, and applying directory security r
 To automate this workflow, I developed user_management.sh. This interactive script prompts the operator for a username and group, utilizes getent recursive loops to validate against duplicates, prompts for a secure password, configures home directory allocations at root `/`, and enforces strict 1770 folder security boundaries.
 
 #### 📸 Verification Artifacts (Part 2)
-![Output Screenshot](/screenshots/.png)
+![Output Screenshot](screenshots/script_execution.png)
+![Output Screenshot](screenshots/ls-lah.png)
 
 ---
 ### 📂 Part 3: Incident Response Archive and Backups
@@ -50,7 +53,8 @@ During security incidents or active server investigations, preserving system tel
 This phase details a backup policy that targets all `.log` files in `/var/log`, archives them without carrying parent directory path structures (which simplifies file management), and verifies the archive before safely extracting the payload inside a local secure analysis environment.
 
 #### 📸 Verification Artifacts (Part 3)
-![Output Screenshot](/screenshots/.png)
+![Output Screenshot](screenshots/ls-archive_tar-tf.png)
+![Output Screenshot](screenshots/ls-backup.png)
 
 ---
 ### 🔎 Part 4: High-Performance System Triage & Data Parsing
@@ -59,7 +63,8 @@ In a forensic event or for a system audit, we may need to quickly extract unique
 This high-performance pipeline processes `/etc/services`, strips out comments, ignores blank spaces, eliminates duplicates, and sorts alphabetically. It saves the filtered records to uniqueservices.txt and conditionally counts the resulting lines using the `&&` operator to confirm success.
 
 #### 📸 Verification Artifacts (Part 4)
-![Output Screenshot](/screenshots/.png)
+![Output Screenshot](screenshots/pipeline.png)
+![Output Screenshot](screenshots/cat-uniqueservices.png)
 
 ---
 ### 💡 Key Takeaways
