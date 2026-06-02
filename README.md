@@ -1,7 +1,7 @@
 # Multi-Tenant System Orchestration and Automation with SecOps Baseline
 A multi-tenancy focused Linux configuration and system administration home lab proect. This project documents a complete hands-on deployment transitioning a raw virtual machine into a secure, multi-tenant corporate environment, implementing custom automation scripts, establishing log-preservation backups, and running high-performance text-parsing pipelines in memory.
 
-This lab was successfully configured, tested, and validated on a 64-bit virtual machine running Ubuntu Server 22.04 LTS (minimal kernel pre-built by OSBoxes) hosted on a VMware Workstation hypervisor. [(Automatic) Download here](https://sourceforge.net/projects/osboxes/files/v/vm/55-U--u/OVA-Versions/22.04-VM/Ubuntu-22.04-64bit-VMware.ova/download)   
+This lab was successfully configured, tested, and validated on a **64-bit virtual machine** running **Ubuntu Server 22.04 LTS** (minimal kernel pre-built by OSBoxes) hosted on a VMware Workstation hypervisor. [(Automatic) Download here](https://sourceforge.net/projects/osboxes/files/v/vm/55-U--u/OVA-Versions/22.04-VM/Ubuntu-22.04-64bit-VMware.ova/download)   
 *(download the free VMware Workstation Pro first then open the downloaded file from above inside it)*
 
 ## 📁 Repository Directory Structure
@@ -12,9 +12,11 @@ Repository
 ├── scripts/
 │   └── user_management.sh         # Interactive user provisioning Bash script
 └── docs/
-├── multi-tenant-design.md     # Part 1 technical deep-dive and logs
-├── backup-procedures.md       # Part 3 backup methodologies and commands
-└── system-triage.md           # Part 4 parsing pipelines and command breakdown
+│   └── multi-tenant-design.md     # Part 1 technical deep-dive and logs
+│   └── backup-procedures.md       # Part 3 backup methodologies and commands
+│   └── system-triage.md           # Part 4 parsing pipelines and command breakdown
+└── screenshots/
+    └── [screenshot].png           # Project artifacts in graphical, png file format
 ```
 ---
 ### 🛡️ Part 1: Multi-Tenant Access Isolation
